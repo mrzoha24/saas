@@ -773,10 +773,6 @@
                 <label class="block text-xs font-bold text-slate-300 mb-1">Email Address</label>
                 <input type="email" id="emailInput" required placeholder="manager@yourpub.co.uk" class="w-full bg-pubDark-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
             </div>
-            <div>
-                <label class="block text-xs font-bold text-slate-300 mb-1">Event Details (For AI Automation)</label>
-                <input type="text" id="eventDetailsInput" required placeholder="e.g. Quiz Wednesday, Live Music Friday" class="w-full bg-pubDark-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
-            </div>
 
             <!-- Connect Facebook Page Button -->
             <div>
@@ -794,7 +790,7 @@
         <div id="modalSuccess" class="hidden text-center py-8 space-y-3">
             <div class="text-4xl">🎉</div>
             <h4 class="text-xl font-bold text-white">Welcome aboard PUB AI!</h4>
-            <p class="text-xs text-slate-300">Data sent to n8n successfully! Check your n8n execution log.</p>
+            <p class="text-xs text-slate-300">We've sent a magic login link to your email. Check your inbox to generate your first week of pub marketing!</p>
             <button onclick="closeTrialModal()" class="bg-pubDark-800 text-slate-200 text-xs px-4 py-2 rounded-lg">Close</button>
         </div>
     </div>
@@ -1007,7 +1003,6 @@
             manager_name: document.getElementById('managerNameInput').value,
             location: document.getElementById('locationInput').value,
             email: document.getElementById('emailInput').value,
-            event_details: document.getElementById('eventDetailsInput').value,
             fb_connected: true
         };
 
@@ -1048,6 +1043,7 @@
         menu.classList.toggle('hidden');
     });
 
+    // Initial render call
     window.onload = function() {
         renderEventTags();
         renderEventCards();
