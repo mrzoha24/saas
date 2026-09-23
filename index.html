@@ -51,7 +51,6 @@
       .hero-gradient {
         background: radial-gradient(circle at 50% 20%, rgba(245, 158, 11, 0.15) 0%, rgba(15, 20, 32, 0) 70%);
       }
-      /* Custom scrollbar */
       ::-webkit-scrollbar {
         width: 10px;
       }
@@ -93,14 +92,12 @@
             <a href="#pricing" class="hidden sm:inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-pubDark-950 font-bold px-5 py-2.5 rounded-xl transition duration-300 shadow-lg shadow-amber-500/20 hover:scale-105">
                 Start Free Trial
             </a>
-            <!-- Mobile Menu Toggle Button -->
             <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
                 <i class="fa-solid fa-bars text-xl"></i>
             </button>
         </div>
     </div>
     
-    <!-- Mobile Dropdown -->
     <div id="mobileMenu" class="hidden md:hidden bg-pubDark-900 border-b border-slate-800 px-6 py-4 space-y-3">
         <a href="#events" class="block text-slate-300 hover:text-amber-400 py-1">Event AI</a>
         <a href="#how-it-works" class="block text-slate-300 hover:text-amber-400 py-1">Weekly Generator</a>
@@ -115,7 +112,6 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
-            <!-- Left Hero Content -->
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
                 <div class="inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide">
                     <span class="inline-block w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
@@ -131,7 +127,6 @@
                     More customers. More events. Less time creating posts. PUB AI creates and schedules your pub’s social media, promotions and event marketing automatically — so you can concentrate on running the pub.
                 </p>
 
-                <!-- Pricing Callout Badge & CTA -->
                 <div class="pt-2">
                     <div class="bg-pubDark-800/90 border border-slate-700/80 rounded-2xl p-5 md:p-6 shadow-2xl max-w-xl mx-auto lg:mx-0 amber-border-glow">
                         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -157,15 +152,12 @@
                 </div>
             </div>
 
-            <!-- Right Hero Visual Showcase -->
             <div class="lg:col-span-5 relative">
-                <!-- Main Hero Photo Collage -->
                 <div class="relative mx-auto max-w-md lg:max-w-none">
                     <div class="relative z-10 rounded-3xl overflow-hidden border-2 border-slate-700/60 shadow-2xl bg-pubDark-900 group">
                         <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1000&q=80" alt="Cozy Irish Pub Bar Interior with Draft Pints" class="w-full h-[420px] object-cover object-center group-hover:scale-105 transition duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-pubDark-950 via-pubDark-950/40 to-transparent"></div>
                         
-                        <!-- Floating Live Social Notification Card 1 -->
                         <div class="absolute top-4 left-4 right-4 bg-pubDark-900/90 backdrop-blur-md border border-amber-500/40 p-3.5 rounded-2xl shadow-xl flex items-center space-x-3">
                             <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
                                 <i class="fa-solid fa-robot text-lg"></i>
@@ -179,7 +171,6 @@
                             </div>
                         </div>
 
-                        <!-- Floating Live Social Notification Card 2 -->
                         <div class="absolute bottom-6 left-6 right-6 bg-pubDark-800/95 border border-slate-700 p-4 rounded-2xl shadow-2xl">
                             <div class="flex items-center space-x-3 mb-2">
                                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500 text-pubDark-950 uppercase">Auto Schedule</span>
@@ -194,7 +185,6 @@
                         </div>
                     </div>
 
-                    <!-- Secondary Floating Decorative Photo -->
                     <div class="hidden sm:block absolute -bottom-6 -left-8 w-44 h-44 rounded-2xl overflow-hidden border-2 border-amber-500/50 shadow-2xl z-20 rotate-[-6deg] hover:rotate-0 transition duration-300">
                         <img src="https://images.unsplash.com/photo-1538488881038-e252a119ace7?auto=format&fit=crop&w=500&q=80" alt="Fresh Pint of Stout" class="w-full h-full object-cover">
                     </div>
@@ -218,387 +208,9 @@
             </p>
         </div>
 
-        <!-- Event Tag Selector Tabs (Interactive Simulator) -->
-        <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-12" id="eventTagsContainer">
-            <!-- Dynamic JS handles click -->
-        </div>
+        <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-12" id="eventTagsContainer"></div>
 
-        <!-- Dynamic Event Preview Display Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="eventCardsGrid">
-            <!-- Populated via JavaScript for full interactivity -->
-        </div>
-
-    </div>
-</section>
-
-<section id="how-it-works" class="py-24 bg-pubDark-950 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- Left Column: Input Simulator -->
-            <div class="lg:col-span-5 space-y-6">
-                <span class="text-amber-500 font-bold text-sm tracking-widest uppercase">Zero Effort Automation</span>
-                <h2 class="text-3xl sm:text-4xl font-heading font-black text-white">
-                    One message. <br><span class="text-amber-400">A whole week's marketing.</span>
-                </h2>
-                <p class="text-slate-300 leading-relaxed">
-                    No complicated software or design tools. Just type or speak one simple message to PUB AI about what’s happening in your pub this week.
-                </p>
-
-                <!-- Interactive Chat Prompt Box -->
-                <div class="bg-pubDark-900 border border-slate-700/80 rounded-2xl p-6 shadow-2xl relative">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
-                        <div class="flex items-center space-x-2">
-                            <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                            <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                            <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
-                        </div>
-                        <span class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-comment-dots text-amber-500 mr-1"></i> PUB AI Voice & Text Prompt</span>
-                    </div>
-
-                    <div class="text-xs text-slate-400 uppercase tracking-wider mb-2 font-bold">Simply tell PUB AI what's happening:</div>
-                    <div class="bg-pubDark-950 border border-amber-500/40 p-4 rounded-xl text-amber-300 font-mono text-sm sm:text-base leading-relaxed relative">
-                        “Quiz Wednesday, live music Friday and Ireland match Saturday at 8pm.”
-                        <span class="inline-block w-2 h-4 bg-amber-400 ml-1 animate-pulse"></span>
-                    </div>
-
-                    <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400">
-                        <span><i class="fa-solid fa-check-double text-amber-500 mr-1"></i> Understood instantly</span>
-                        <span class="text-amber-400 font-semibold">Generates 5 Channels</span>
-                    </div>
-                </div>
-
-                <div class="bg-pubDark-800/50 border border-slate-800 p-4 rounded-xl flex items-center space-x-4">
-                    <div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 font-bold text-lg">
-                        <i class="fa-solid fa-[#]">1</i>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-bold text-sm">You approve it.</h4>
-                        <p class="text-xs text-slate-400">Review AI posts on your phone in under 30 seconds.</p>
-                    </div>
-                </div>
-
-                <div class="bg-pubDark-800/50 border border-slate-800 p-4 rounded-xl flex items-center space-x-4">
-                    <div class="w-10 h-10 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 font-bold text-lg">
-                        <i class="fa-solid fa-[#]">2</i>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-bold text-sm">PUB AI publishes it.</h4>
-                        <p class="text-xs text-slate-400">Automatically cross-posted and scheduled everywhere.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column: Generated Output Channels Carousel / Cards -->
-            <div class="lg:col-span-7">
-                <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider mb-4 flex items-center justify-between">
-                    <span>PUB AI Automatically Creates & Schedules:</span>
-                    <span class="text-amber-400"><i class="fa-solid fa-arrows-rotate mr-1 animate-spin"></i> Real-time Output Engine</span>
-                </div>
-
-                <div class="grid sm:grid-cols-2 gap-4">
-                    
-                    <!-- Generated Card: Facebook Post -->
-                    <div class="bg-pubDark-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300">
-                        <div class="p-3 bg-pubDark-800/80 border-b border-slate-800 flex items-center justify-between">
-                            <span class="text-xs font-bold text-blue-400 flex items-center"><i class="fa-brands fa-facebook mr-1.5 text-sm"></i> Facebook Post</span>
-                            <span class="text-[10px] text-green-400 font-mono">Ready to publish</span>
-                        </div>
-                        <div class="h-36 overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Live Music Band in Pub" class="w-full h-full object-cover">
-                            <div class="absolute bottom-2 right-2 bg-pubDark-950/90 text-amber-400 text-[10px] px-2 py-0.5 rounded font-bold">FRIDAY 8PM</div>
-                        </div>
-                        <div class="p-4 space-y-2">
-                            <p class="text-xs text-slate-200 line-clamp-3">
-                                🎸 <strong>LIVE MUSIC FRIDAY!</strong> Kick off your weekend at The Duke with live acoustic covers starting at 8PM. Cold pints & pub classics served all night!
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Generated Card: Instagram Post & Story -->
-                    <div class="bg-pubDark-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300">
-                        <div class="p-3 bg-pubDark-800/80 border-b border-slate-800 flex items-center justify-between">
-                            <span class="text-xs font-bold text-pink-400 flex items-center"><i class="fa-brands fa-instagram mr-1.5 text-sm"></i> Instagram & Story</span>
-                            <span class="text-[10px] text-green-400 font-mono">Ready to publish</span>
-                        </div>
-                        <div class="h-36 overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=600&q=80" alt="Pub Trivia Quiz Night Pint" class="w-full h-full object-cover">
-                            <div class="absolute bottom-2 left-2 bg-amber-500 text-pubDark-950 text-[10px] px-2 py-0.5 rounded font-black">QUIZ WEDNESDAY</div>
-                        </div>
-                        <div class="p-4 space-y-2">
-                            <p class="text-xs text-slate-200 line-clamp-3">
-                                🧠 <strong>PUB QUIZ NIGHT!</strong> Wednesday from 8PM. €100 Bar Tab jackpot, craft pints, and maximum banter. Tag your quiz team below! 👇 #PubQuiz
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Generated Card: Google Business Post -->
-                    <div class="bg-pubDark-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300">
-                        <div class="p-3 bg-pubDark-800/80 border-b border-slate-800 flex items-center justify-between">
-                            <span class="text-xs font-bold text-red-400 flex items-center"><i class="fa-brands fa-google mr-1.5 text-sm"></i> Google Business Event</span>
-                            <span class="text-[10px] text-green-400 font-mono">Ready to publish</span>
-                        </div>
-                        <div class="h-36 overflow-hidden relative">
-                            <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="Sports Match Broadcast in Pub" class="w-full h-full object-cover">
-                            <div class="absolute bottom-2 right-2 bg-red-600 text-white text-[10px] px-2 py-0.5 rounded font-bold">MATCH DAY SATURDAY</div>
-                        </div>
-                        <div class="p-4 space-y-2">
-                            <p class="text-xs text-slate-200 line-clamp-3">
-                                🏉 <strong>IRELAND VS ARGENTINA LIVE:</strong> Saturday at 8PM on 6 big screens! Walk-ins welcome, food served till 10PM.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Generated Card: Email Campaign -->
-                    <div class="bg-pubDark-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-amber-500/50 transition duration-300">
-                        <div class="p-3 bg-pubDark-800/80 border-b border-slate-800 flex items-center justify-between">
-                            <span class="text-xs font-bold text-amber-400 flex items-center"><i class="fa-solid fa-envelope mr-1.5 text-sm"></i> Customer Email Digest</span>
-                            <span class="text-[10px] text-green-400 font-mono">Ready to send</span>
-                        </div>
-                        <div class="p-4 space-y-2 h-full flex flex-col justify-between">
-                            <div class="space-y-1">
-                                <div class="text-[11px] font-bold text-amber-400">Subject: What's On This Week at The Shamrock Pub!</div>
-                                <p class="text-[11px] text-slate-300">
-                                    Hey John! Here is your lineup for the weekend: Quiz Wednesday, Live Irish Folk Friday & Saturday Rugby Special...
-                                </p>
-                            </div>
-                            <div class="bg-amber-500/20 text-amber-400 text-center text-[10px] font-bold py-1.5 rounded">
-                                Sent to 450 VIP Pub Members
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<section id="photo-magic" class="py-20 bg-pubDark-900 border-y border-slate-800/80">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-amber-500 font-bold text-sm tracking-widest uppercase">Instant Content Creation</span>
-            <h2 class="text-3xl sm:text-4xl font-heading font-black text-white mt-2 mb-4">
-                Take a photo. Get a promotion.
-            </h2>
-            <p class="text-lg text-slate-300">
-                Got a great burger? Got a new cocktail? Live band tonight? PUB AI turns standard phone photos into branded, high-converting promotional content for your pub.
-            </p>
-            <div class="mt-4 inline-block bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold px-4 py-2 rounded-xl text-sm">
-                ✨ No graphic designer required.
-            </div>
-        </div>
-
-        <!-- Interactive Before / After Photo Transformation Demo -->
-        <div class="bg-pubDark-950 border border-slate-800 rounded-3xl p-6 sm:p-10 max-w-5xl mx-auto shadow-2xl">
-            
-            <!-- Category Tabs for Photo Demo -->
-            <div class="flex justify-center space-x-3 mb-8" id="photoCategoryTabs">
-                <button onclick="switchPhotoDemo('burger')" id="tab-burger" class="photo-demo-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-amber-500 text-pubDark-950 transition">
-                    🍔 Pub Gourmet Burger
-                </button>
-                <button onclick="switchPhotoDemo('cocktail')" id="tab-cocktail" class="photo-demo-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-pubDark-800 text-slate-300 hover:text-white transition">
-                    🍸 Craft Cocktail
-                </button>
-                <button onclick="switchPhotoDemo('band')" id="tab-band" class="photo-demo-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-pubDark-800 text-slate-300 hover:text-white transition">
-                    🎤 Live Band Night
-                </button>
-            </div>
-
-            <div class="grid md:grid-cols-12 gap-8 items-center">
-                
-                <!-- BEFORE: Raw Phone Photo -->
-                <div class="md:col-span-5 text-center">
-                    <div class="relative rounded-2xl overflow-hidden border-2 border-slate-700 shadow-lg group">
-                        <img id="demoRawImg" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Raw Pub Burger Photo" class="w-full h-72 object-cover transition duration-500">
-                        <div class="absolute top-3 left-3 bg-slate-900/90 text-slate-300 font-mono text-[10px] px-2.5 py-1 rounded-md border border-slate-700">
-                            📷 Raw Phone Photo
-                        </div>
-                    </div>
-                    <p class="text-xs text-slate-400 mt-3">Snap a quick photo with your phone behind the bar or kitchen</p>
-                </div>
-
-                <!-- ARROW / AI PROCESSOR -->
-                <div class="md:col-span-2 flex flex-col items-center justify-center space-y-2">
-                    <div class="w-12 h-12 rounded-full bg-amber-500 text-pubDark-950 flex items-center justify-center text-xl font-bold animate-bounce shadow-lg shadow-amber-500/30">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-                    <span class="text-[11px] font-bold text-amber-400 uppercase tracking-wider">PUB AI Magic</span>
-                </div>
-
-                <!-- AFTER: AI Branded Promotional Post -->
-                <div class="md:col-span-5">
-                    <div class="bg-pubDark-900 border-2 border-amber-500/60 rounded-2xl overflow-hidden shadow-2xl relative amber-border-glow">
-                        <div class="p-3 bg-pubDark-800 border-b border-slate-700 flex items-center justify-between">
-                            <div class="flex items-center space-x-2">
-                                <div class="w-6 h-6 rounded-full bg-amber-500 text-pubDark-950 flex items-center justify-center text-xs font-bold">P</div>
-                                <span class="text-xs font-bold text-white">The Crown & Anchor</span>
-                            </div>
-                            <span class="text-[10px] text-amber-400 font-semibold uppercase">PROMO READY</span>
-                        </div>
-
-                        <div class="relative h-64 overflow-hidden">
-                            <img id="demoProcessedImg" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Processed Pub Burger Promo" class="w-full h-full object-cover">
-                            <!-- Overlay AI Overlay Graphics & Typography -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-pubDark-950 via-transparent to-transparent flex flex-col justify-end p-4">
-                                <span id="demoOverlayBadge" class="self-start bg-amber-500 text-pubDark-950 font-black text-[10px] uppercase px-2 py-0.5 rounded mb-1">
-                                    SPECIAL OFFER • THURSDAYS
-                                </span>
-                                <h4 id="demoOverlayTitle" class="text-xl font-heading font-black text-white leading-tight">
-                                    2-for-1 Smash Burgers All Evening!
-                                </h4>
-                            </div>
-                        </div>
-
-                        <div class="p-4 bg-pubDark-900 space-y-2">
-                            <p id="demoCaptionText" class="text-xs text-slate-300 leading-relaxed">
-                                🍔 Double smash beef, aged Irish cheddar, crispy bacon & house sauce. Paired best with a fresh craft IPA! Reserve a table now or drop in. #PubFood #BurgerOffer #PubGrub
-                            </p>
-                            <div class="pt-2 flex justify-between items-center">
-                                <button class="bg-amber-500 text-pubDark-950 font-bold text-[11px] px-3 py-1.5 rounded-lg w-full hover:bg-amber-400 transition">
-                                    Publish to Instagram & Facebook <i class="fa-solid fa-paper-plane ml-1"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<section id="features" class="py-24 bg-pubDark-950">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="text-amber-500 font-bold text-sm tracking-widest uppercase">Everything You Need</span>
-            <h2 class="text-3xl sm:text-4xl font-heading font-black text-white mt-2 mb-4">
-                PUB AI Keeps Your Pub Busy
-            </h2>
-            <p class="text-lg text-slate-300">
-                Every week, PUB AI creates a complete 360-degree marketing campaign tailored specifically for wet-led and food-led pubs.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl hover:border-amber-500/50 transition duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
-                    <i class="fa-solid fa-hashtag"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 flex items-center">
-                    <span class="text-amber-500 mr-2">✓</span> Social Media Posts
-                </h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Automated, high-converting posts for Facebook and Instagram with localized captions and trending pub hashtags.
-                </p>
-            </div>
-
-            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl hover:border-amber-500/50 transition duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
-                    <i class="fa-solid fa-calendar-star"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 flex items-center">
-                    <span class="text-amber-500 mr-2">✓</span> Event Promotions
-                </h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Promotional artwork and announcements for gigs, live traditional music, open mics, and themed nights.
-                </p>
-            </div>
-
-            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl hover:border-amber-500/50 transition duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
-                    <i class="fa-solid fa-burger"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 flex items-center">
-                    <span class="text-amber-500 mr-2">✓</span> Food & Drink Offers
-                </h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Promote daily lunch specials, steak nights, cocktail hours, craft beer launches, and Sunday roasts.
-                </p>
-            </div>
-
-            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl hover:border-amber-500/50 transition duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
-                    <i class="fa-solid fa-trophy"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 flex items-center">
-                    <span class="text-amber-500 mr-2">✓</span> Match-Day Campaigns
-                </h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Automatic fixture graphics and social announcements for Six Nations, Premier League, GAA, and Champions League games.
-                </p>
-            </div>
-
-            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl hover:border-amber-500/50 transition duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
-                    <i class="fa-solid fa-question text-xl"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 flex items-center">
-                    <span class="text-amber-500 mr-2">✓</span> Quiz & Entertainment
-                </h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Weekly pub quiz teasers, jackpot scoreboards, and bingo night promotions to drive mid-week footfall.
-                </p>
-            </div>
-
-            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl hover:border-amber-500/50 transition duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
-                    <i class="fa-brands fa-google"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 flex items-center">
-                    <span class="text-amber-500 mr-2">✓</span> Google Business Updates
-                </h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Keep your pub listing active on Google Search & Maps to capture locals and tourists searching for "pub near me".
-                </p>
-            </div>
-
-            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl hover:border-amber-500/50 transition duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
-                    <i class="fa-solid fa-paper-plane"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 flex items-center">
-                    <span class="text-amber-500 mr-2">✓</span> Customer Emails
-                </h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Beautiful weekend digest emails sent straight to your subscriber list to secure table bookings in advance.
-                </p>
-            </div>
-
-            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl hover:border-amber-500/50 transition duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 flex items-center">
-                    <span class="text-amber-500 mr-2">✓</span> Instagram Stories
-                </h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Vertical full-screen story layouts designed specifically for rapid phone viewing on the move.
-                </p>
-            </div>
-
-            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl hover:border-amber-500/50 transition duration-300">
-                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold mb-4">
-                    <i class="fa-solid fa-comments"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 flex items-center">
-                    <span class="text-amber-500 mr-2">✓</span> Review Responses & Q&A
-                </h3>
-                <p class="text-sm text-slate-400 leading-relaxed">
-                    Automated polite, professional replies to Google and Tripadvisor customer reviews for your venue.
-                </p>
-            </div>
-
-        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="eventCardsGrid"></div>
 
     </div>
 </section>
@@ -618,7 +230,6 @@
 
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
             
-            <!-- PLAN 1: PUB AI -->
             <div class="bg-pubDark-950 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-700 transition duration-300 relative">
                 <div>
                     <div class="inline-block bg-slate-800 text-slate-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
@@ -638,10 +249,6 @@
                         <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-3"></i> Facebook & Instagram posts</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-3"></i> Google Business posts</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-3"></i> Event promotion graphics</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-3"></i> Promotional graphics generator</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-3"></i> Weekly marketing plan</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-3"></i> AI marketing assistant</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-amber-500 mr-3"></i> Automatic scheduling</li>
                     </ul>
                 </div>
 
@@ -650,7 +257,6 @@
                 </a>
             </div>
 
-            <!-- PLAN 2: PUB AI PRO -->
             <div class="bg-pubDark-950 border-2 border-amber-500 rounded-3xl p-8 flex flex-col justify-between shadow-2xl relative amber-glow">
                 <div class="absolute -top-4 right-8 bg-gradient-to-r from-amber-500 to-amber-600 text-pubDark-950 font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
                     MOST POPULAR
@@ -669,16 +275,10 @@
                         <p class="text-xs text-amber-500 font-semibold mt-2">✓ 14-Day Free Trial Included</p>
                     </div>
 
-                    <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3">Everything in PUB AI, plus:</div>
-
                     <ul class="space-y-3.5 text-sm text-slate-300 mb-8">
                         <li class="flex items-center font-medium text-white"><i class="fa-solid fa-star text-amber-400 mr-3"></i> Email campaigns</li>
                         <li class="flex items-center font-medium text-white"><i class="fa-solid fa-star text-amber-400 mr-3"></i> Customer promotions</li>
-                        <li class="flex items-center font-medium text-white"><i class="fa-solid fa-star text-amber-400 mr-3"></i> Birthday campaigns</li>
-                        <li class="flex items-center font-medium text-white"><i class="fa-solid fa-star text-amber-400 mr-3"></i> Re-engagement campaigns</li>
                         <li class="flex items-center font-medium text-white"><i class="fa-solid fa-star text-amber-400 mr-3"></i> Customer database CRM</li>
-                        <li class="flex items-center font-medium text-white"><i class="fa-solid fa-star text-amber-400 mr-3"></i> Advanced campaigns</li>
-                        <li class="flex items-center font-medium text-white"><i class="fa-solid fa-star text-amber-400 mr-3"></i> Marketing analytics</li>
                     </ul>
                 </div>
 
@@ -687,36 +287,6 @@
                 </a>
             </div>
 
-        </div>
-
-    </div>
-</section>
-
-<section class="py-24 bg-gradient-to-b from-pubDark-900 to-pubDark-950 relative overflow-hidden border-t border-slate-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        
-        <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-3xl mx-auto mb-6">
-            🍻
-        </div>
-
-        <h2 class="text-3xl sm:text-5xl font-heading font-black text-white mb-6">
-            Stop wondering what to post.
-        </h2>
-
-        <p class="text-lg sm:text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            PUB AI tells you what to promote, creates the campaign and gets it in front of your customers. Your pub already has great events. We make sure people know about them.
-        </p>
-
-        <div class="space-y-4">
-            <button onclick="openTrialModal('General Free Trial')" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-pubDark-950 font-black text-lg px-10 py-5 rounded-2xl transition duration-300 shadow-2xl shadow-amber-500/30 hover:scale-105">
-                START YOUR FREE TRIAL <i class="fa-solid fa-chevron-right ml-2"></i>
-            </button>
-            <p class="text-xs text-slate-400">No credit card required for 14-day trial • Cancel anytime</p>
-        </div>
-
-        <div class="mt-12 pt-8 border-t border-slate-800/80 flex flex-wrap justify-center items-center gap-6 text-sm text-amber-500 font-semibold">
-            <span>☘️ Built specifically for Irish & UK pubs.</span>
-            <span>🇬🇧 Full UK/Ireland Sports Fixture Integration</span>
         </div>
 
     </div>
@@ -737,6 +307,7 @@
     </div>
 </footer>
 
+<!-- Trial Modal -->
 <div id="trialModal" class="fixed inset-0 bg-pubDark-950/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
     <div class="bg-pubDark-900 border border-slate-700 rounded-3xl p-6 sm:p-8 max-w-lg w-full relative shadow-2xl amber-border-glow">
         <button onclick="closeTrialModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
@@ -774,21 +345,19 @@
                 <input type="email" id="emailInput" required placeholder="manager@yourpub.co.uk" class="w-full bg-pubDark-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
             </div>
 
-            <!-- Connect Facebook Page Button -->
+            <!-- Real Facebook Login & Page Fetch Button -->
             <div>
-                <button type="button" onclick="connectFacebookPage()" class="w-full bg-[#1877F2] hover:bg-[#165fe6] text-white font-bold py-3 rounded-xl transition duration-300 flex items-center justify-center space-x-2 text-sm shadow-md">
+                <button type="button" onclick="loginWithFacebook()" class="w-full bg-[#1877F2] hover:bg-[#165fe6] text-white font-bold py-3 rounded-xl transition duration-300 flex items-center justify-center space-x-2 text-sm shadow-md">
                     <i class="fa-brands fa-facebook text-lg"></i>
-                    <span id="fbConnectText">Connect Facebook Page</span>
+                    <span id="fbConnectText">Connect Facebook Page (Real API)</span>
                 </button>
             </div>
 
-            <!-- Facebook Page Selection Dropdown (Hidden initially, appears after clicking connect) -->
+            <!-- Real Page Selection Dropdown (Loaded dynamically from FB Graph API) -->
             <div id="pageSelectContainer" class="hidden">
-                <label class="block text-xs font-bold text-slate-300 mb-1">Select Facebook Page</label>
+                <label class="block text-xs font-bold text-slate-300 mb-1">Select Your Facebook Page</label>
                 <select id="facebookPageInput" class="w-full bg-pubDark-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
-                    <option value="The Red Lion Pub">The Red Lion Pub</option>
-                    <option value="O'Malley's Irish Bar">O'Malley's Irish Bar</option>
-                    <option value="The Shamrock Lounge">The Shamrock Lounge</option>
+                    <!-- Dynamic pages will populate here -->
                 </select>
             </div>
 
@@ -800,14 +369,71 @@
         <div id="modalSuccess" class="hidden text-center py-8 space-y-3">
             <div class="text-4xl">🎉</div>
             <h4 class="text-xl font-bold text-white">Welcome aboard PUB AI!</h4>
-            <p class="text-xs text-slate-300">We've sent a magic login link to your email. Check your inbox to generate your first week of pub marketing!</p>
+            <p class="text-xs text-slate-300">We've sent your setup and connected Facebook details to n8n successfully!</p>
             <button onclick="closeTrialModal()" class="bg-pubDark-800 text-slate-200 text-xs px-4 py-2 rounded-lg">Close</button>
         </div>
     </div>
 </div>
 
+<!-- Facebook SDK Asynchronous Script Loader -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
 <script>
-    // Event category data with photos and custom copy
+    // Initialize Facebook SDK
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : 'YOUR_FB_APP_ID', // Replace with your actual Facebook App ID from developers.facebook.com
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v18.0'
+        });
+    };
+
+    let facebookConnected = false;
+    let selectedPageAccessToken = '';
+
+    // Real Facebook Login and Fetch Pages function
+    function loginWithFacebook() {
+        FB.login(function(response) {
+            if (response.authResponse) {
+                const userAccessToken = response.authResponse.accessToken;
+                
+                // Fetch real pages managed by the authenticated user via Graph API
+                FB.api('/me/accounts', { access_token: userAccessToken }, function(res) {
+                    if (res && !res.error) {
+                        const pages = res.data;
+                        const selectElement = document.getElementById('facebookPageInput');
+                        selectElement.innerHTML = '';
+
+                        if (pages && pages.length > 0) {
+                            pages.forEach(page => {
+                                let option = document.createElement('option');
+                                option.value = page.name; 
+                                option.setAttribute('data-id', page.id);
+                                option.setAttribute('data-token', page.access_token);
+                                option.textContent = page.name;
+                                selectElement.appendChild(option);
+                            });
+
+                            facebookConnected = true;
+                            selectedPageAccessToken = pages[0].access_token; // default first
+                            
+                            document.getElementById('fbConnectText').innerText = '✓ Facebook Connected Successfully';
+                            document.getElementById('pageSelectContainer').classList.remove('hidden');
+                        } else {
+                            alert('No Facebook pages found under your account!');
+                        }
+                    } else {
+                        alert('Failed to fetch Facebook pages. Please check app permissions.');
+                    }
+                });
+            } else {
+                alert('Facebook login was cancelled or not fully authorized.');
+            }
+        }, { scope: 'pages_show_list,pages_manage_posts,pages_read_engagement' });
+    }
+
+    // Event Data Setup
     const eventData = [
         {
             id: 'music',
@@ -840,45 +466,11 @@
             photo: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80',
             headline: '2-for-1 Gourmet Burger Night',
             copy: 'Thursday nights are for burger lovers! Buy any gourmet smash burger and get the second completely free from 5PM.'
-        },
-        {
-            id: 'dj',
-            title: 'DJ Night',
-            icon: '🎤',
-            photo: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80',
-            headline: 'Saturday Weekend Party DJ',
-            copy: 'Spinning classic anthems, floorfillers, and 90s pub hits from 9PM till late. Cocktail specials at the main bar!'
-        },
-        {
-            id: 'drinks',
-            title: 'Drinks Promotion',
-            icon: '🍻',
-            photo: 'https://images.unsplash.com/photo-1538488881038-e252a119ace7?auto=format&fit=crop&w=600&q=80',
-            headline: 'Craft Beer & Stout Showcase',
-            copy: 'Discover fresh local taps and craft releases this weekend. 20% off all craft flights every Tuesday!'
-        },
-        {
-            id: 'seasonal',
-            title: 'Seasonal Events',
-            icon: '🎃',
-            photo: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80',
-            headline: 'St. Patrick’s & Bank Holiday Festivities',
-            copy: 'Join us for 3 days of traditional Irish music, fresh Guinness, stew, and celebration! Early booking recommended.'
-        },
-        {
-            id: 'special',
-            title: 'Special Events',
-            icon: '🎉',
-            photo: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=600&q=80',
-            headline: 'Private Parties & Function Room Hire',
-            copy: 'Planning a birthday or corporate night? Rent our cozy back room with private bar setup and catering included.'
         }
     ];
 
     let activeEventId = 'music';
-    let facebookConnected = false;
 
-    // Render Event Tags
     function renderEventTags() {
         const container = document.getElementById('eventTagsContainer');
         if(!container) return;
@@ -894,7 +486,6 @@
         `).join('');
     }
 
-    // Render Event Cards Grid based on selection
     function renderEventCards() {
         const grid = document.getElementById('eventCardsGrid');
         if(!grid) return;
@@ -917,12 +508,6 @@
                         <p class="text-xs text-slate-300 line-clamp-3 leading-relaxed">${item.copy}</p>
                     </div>
                 </div>
-                <div class="p-4 pt-0">
-                    <div class="bg-pubDark-900 border border-slate-800 p-2 rounded-lg text-[10px] text-slate-400 flex justify-between items-center">
-                        <span><i class="fa-solid fa-sparkles text-amber-400"></i> Auto-Generated</span>
-                        <span class="text-amber-400 font-semibold">Ready to Schedule</span>
-                    </div>
-                </div>
             </div>
         `).join('');
     }
@@ -933,58 +518,11 @@
         renderEventCards();
     }
 
-    // Photo Magic Demo Switching
-    const photoDemos = {
-        burger: {
-            raw: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80',
-            processed: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80',
-            badge: 'FOOD SPECIAL • THURSDAYS',
-            title: '2-for-1 Smash Burgers All Evening!',
-            caption: '🍔 Double smash beef, aged Irish cheddar, crispy bacon & house sauce. Paired best with a fresh craft IPA! Reserve a table now or drop in. #PubFood #BurgerOffer #PubGrub'
-        },
-        cocktail: {
-            raw: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=80',
-            processed: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=700&q=80',
-            badge: 'HAPPY HOUR • 5PM - 7PM',
-            title: 'Signature Espresso Martinis & Craft Cocktails',
-            caption: '🍸 Start your weekend early with our hand-crafted cocktail specials. 2 for €15 every Friday from 5PM! #CocktailHour #PubVibes #WeekendStart'
-        },
-        band: {
-            raw: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=700&q=80',
-            processed: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=700&q=80',
-            badge: 'LIVE MUSIC • THIS FRIDAY',
-            title: 'The Dublin Rovers Live in the Lounge!',
-            caption: '🎤 Traditional folk tunes, rock covers, and legendary atmospheres this Friday at 8:30PM. Get in early for best seats! #LiveMusicPub #IrishMusic #PubGig'
-        }
-    };
-
-    function switchPhotoDemo(type) {
-        const demo = photoDemos[type];
-        if (!demo) return;
-
-        document.querySelectorAll('.photo-demo-tab').forEach(btn => {
-            btn.classList.remove('bg-amber-500', 'text-pubDark-950');
-            btn.classList.add('bg-pubDark-800', 'text-slate-300');
-        });
-        const activeTab = document.getElementById(`tab-${type}`);
-        if(activeTab) {
-            activeTab.classList.remove('bg-pubDark-800', 'text-slate-300');
-            activeTab.classList.add('bg-amber-500', 'text-pubDark-950');
-        }
-
-        document.getElementById('demoRawImg').src = demo.raw;
-        document.getElementById('demoProcessedImg').src = demo.processed;
-        document.getElementById('demoOverlayBadge').innerText = demo.badge;
-        document.getElementById('demoOverlayTitle').innerText = demo.title;
-        document.getElementById('demoCaptionText').innerText = demo.caption;
-    }
-
-    // Modal Control Logic
     function openTrialModal(planName) {
         document.getElementById('modalPlanTitle').innerText = planName ? `Start Trial with ${planName}` : 'Start Your Free Trial';
         document.getElementById('trialModal').classList.remove('hidden');
         facebookConnected = false;
-        document.getElementById('fbConnectText').innerText = 'Connect Facebook Page';
+        document.getElementById('fbConnectText').innerText = 'Connect Facebook Page (Real API)';
         document.getElementById('pageSelectContainer').classList.add('hidden');
     }
 
@@ -992,32 +530,26 @@
         document.getElementById('trialModal').classList.add('hidden');
     }
 
-    // Simulated Facebook Page Connection & Showing Page Dropdown
-    function connectFacebookPage() {
-        facebookConnected = true;
-        const btnText = document.getElementById('fbConnectText');
-        btnText.innerText = '✓ Facebook Page Connected Successfully';
-        
-        // Show page selection dropdown
-        document.getElementById('pageSelectContainer').classList.remove('hidden');
-        alert('সফলভাবে ফেসবুক পেজ কানেক্ট হয়েছে! এখন ড্রপডাউন থেকে আপনার পেজটি সিলেক্ট করুন।');
-    }
-
-    // n8n Webhook Form Submit Handler
+    // Form submission handling data directly to n8n webhook
     document.getElementById('pubForm').addEventListener('submit', async function(e) {
         e.preventDefault();
 
         if (!facebookConnected) {
-            alert('দয়া করে ফর্ম সাবমিট করার আগে "Connect Facebook Page" এ ক্লিক করুন।');
+            alert('Please connect your Facebook page using the button before submitting.');
             return;
         }
 
+        const pageDropdown = document.getElementById('facebookPageInput');
+        const selectedOption = pageDropdown.options[pageDropdown.selectedIndex];
+        
         const payload = {
             pub_name: document.getElementById('pubNameInput').value,
             manager_name: document.getElementById('managerNameInput').value,
             location: document.getElementById('locationInput').value,
             email: document.getElementById('emailInput').value,
-            selected_facebook_page: document.getElementById('facebookPageInput').value,
+            selected_facebook_page: selectedOption.value,
+            page_id: selectedOption.getAttribute('data-id'),
+            page_access_token: selectedOption.getAttribute('data-token'),
             fb_connected: true
         };
 
@@ -1040,19 +572,18 @@
                 document.getElementById('pubForm').classList.add('hidden');
                 document.getElementById('modalSuccess').classList.remove('hidden');
             } else {
-                alert('ওয়েবহুক রিকোয়েস্ট ব্যর্থ হয়েছে। অনুগ্রহ করে n8n টেস্ট মোড চেক করুন।');
+                alert('Webhook request failed. Please verify your n8n workflow.');
                 submitBtn.innerText = 'GET STARTED FOR FREE';
                 submitBtn.disabled = false;
             }
         } catch (error) {
-            console.error('ত্রুটি:', error);
-            alert('n8n ওয়েবহুকের সাথে সংযোগ স্থাপন করতে সমস্যা হচ্ছে।');
-            submitBtn.innerText = 'GET STARTED FOR FREE';
+            console.error('Error:', error);
+            alert('Connection error with n8n webhook.');
+            submitBtn.innerText = 'GET STARTED for FREE';
             submitBtn.disabled = false;
         }
     });
 
-    // Mobile Menu Toggle logic
     document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
         const menu = document.getElementById('mobileMenu');
         menu.classList.toggle('hidden');
