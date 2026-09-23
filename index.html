@@ -13,9 +13,6 @@
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Stripe Payment SDK -->
-    <script src="https://js.stripe.com/v3/"></script>
-    
     <script>
       tailwind.config = {
         theme: {
@@ -782,7 +779,7 @@
             </div>
 
             <!-- Connect Facebook Page Button -->
-            <div class="pt-2">
+            <div>
                 <button type="button" onclick="connectFacebookPage()" class="w-full bg-[#1877F2] hover:bg-[#165fe6] text-white font-bold py-3 rounded-xl transition duration-300 flex items-center justify-center space-x-2 text-sm shadow-md">
                     <i class="fa-brands fa-facebook text-lg"></i>
                     <span id="fbConnectText">Connect Facebook Page</span>
@@ -988,9 +985,8 @@
         document.getElementById('trialModal').classList.add('hidden');
     }
 
-    // Simulated Facebook Page Connection (OAuth Popup placeholder)
+    // Simulated Facebook Page Connection
     function connectFacebookPage() {
-        // Here you can integrate Facebook SDK Login (FB.login)
         facebookConnected = true;
         const btnText = document.getElementById('fbConnectText');
         btnText.innerText = '✓ Facebook Page Connected Successfully';
