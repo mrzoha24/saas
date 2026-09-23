@@ -974,7 +974,7 @@
         document.getElementById('trialModal').classList.add('hidden');
     }
 
-    // n8n Webhook Form Submit Handler
+    // n8n Webhook Form Submit Handler (Updated for multiple submissions / resetting)
     document.getElementById('pubForm').addEventListener('submit', async function(e) {
         e.preventDefault();
 
@@ -1006,16 +1006,20 @@
             });
 
             if (response.ok) {
-                document.getElementById('pubForm').classList.add('hidden');
-                document.getElementById('modalSuccess').classList.remove('hidden');
+                // ফর্ম রিসেট করা এবং বাটন আগের অবস্থায় ফিরিয়ে আনা যাতে বারবার টেস্ট করা যায়
+                document.getElementById('pubForm').reset();
+                submitBtn.innerText = 'GET STARTED FOR FREE';
+                submitBtn.disabled = false;
+                
+                alert('ডাটা সফলভাবে n8n-এ পাঠানো হয়েছে! আপনি চাইলে আবার নতুন ডাটা দিয়ে টেস্ট করতে পারেন।');
             } else {
-                alert('Webhook request failed. Please check n8n active test mode.');
+                alert('ওয়েবহুক রিকোয়েস্ট ব্যর্থ হয়েছে। অনুগ্রহ করে n8n টেস্ট মোড চেক করুন।');
                 submitBtn.innerText = 'GET STARTED FOR FREE';
                 submitBtn.disabled = false;
             }
         } catch (error) {
-            console.error('Error:', error);
-            alert('Connection error with n8n webhook.');
+            console.error('ত্রুটি:', error);
+            alert('n8n ওয়েবহুকের সাথে সংযোগ স্থাপন করতে সমস্যা হচ্ছে।');
             submitBtn.innerText = 'GET STARTED FOR FREE';
             submitBtn.disabled = false;
         }
