@@ -782,6 +782,16 @@
                 </button>
             </div>
 
+            <!-- Facebook Page Selection Dropdown (Hidden initially, appears after clicking connect) -->
+            <div id="pageSelectContainer" class="hidden">
+                <label class="block text-xs font-bold text-slate-300 mb-1">Select Facebook Page</label>
+                <select id="facebookPageInput" class="w-full bg-pubDark-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
+                    <option value="The Red Lion Pub">The Red Lion Pub</option>
+                    <option value="O'Malley's Irish Bar">O'Malley's Irish Bar</option>
+                    <option value="The Shamrock Lounge">The Shamrock Lounge</option>
+                </select>
+            </div>
+
             <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-pubDark-950 font-extrabold py-3.5 rounded-xl transition duration-300 shadow-lg">
                 GET STARTED FOR FREE <i class="fa-solid fa-arrow-right ml-1"></i>
             </button>
@@ -975,18 +985,22 @@
         document.getElementById('trialModal').classList.remove('hidden');
         facebookConnected = false;
         document.getElementById('fbConnectText').innerText = 'Connect Facebook Page';
+        document.getElementById('pageSelectContainer').classList.add('hidden');
     }
 
     function closeTrialModal() {
         document.getElementById('trialModal').classList.add('hidden');
     }
 
-    // Simulated Facebook Page Connection
+    // Simulated Facebook Page Connection & Showing Page Dropdown
     function connectFacebookPage() {
         facebookConnected = true;
         const btnText = document.getElementById('fbConnectText');
         btnText.innerText = '✓ Facebook Page Connected Successfully';
-        alert('সফলভাবে ফেসবুক পেজ কানেক্ট হয়েছে!');
+        
+        // Show page selection dropdown
+        document.getElementById('pageSelectContainer').classList.remove('hidden');
+        alert('সফলভাবে ফেসবুক পেজ কানেক্ট হয়েছে! এখন ড্রপডাউন থেকে আপনার পেজটি সিলেক্ট করুন।');
     }
 
     // n8n Webhook Form Submit Handler
@@ -994,7 +1008,7 @@
         e.preventDefault();
 
         if (!facebookConnected) {
-            alert('দয়া করে ফর্ম সাবমিট করার আগে "Connect Facebook Page" এ ক্লিক করে ফেসবুক পেজ কানেক্ট করুন।');
+            alert('দয়া করে ফর্ম সাবমিট করার আগে "Connect Facebook Page" এ ক্লিক করুন।');
             return;
         }
 
@@ -1003,6 +1017,7 @@
             manager_name: document.getElementById('managerNameInput').value,
             location: document.getElementById('locationInput').value,
             email: document.getElementById('emailInput').value,
+            selected_facebook_page: document.getElementById('facebookPageInput').value,
             fb_connected: true
         };
 
@@ -1043,7 +1058,6 @@
         menu.classList.toggle('hidden');
     });
 
-    // Initial render call
     window.onload = function() {
         renderEventTags();
         renderEventCards();
