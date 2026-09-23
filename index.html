@@ -989,5 +989,25 @@
     };
 </script>
 
+<!-- Firebase SDK Integration -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA4GC9GV_4jc6P39_XXaKM8J_Bs2TnK6Bc",
+    authDomain: "saas-c405c.firebaseapp.com",
+    databaseURL: "https://saas-c405c-default-rtdb.firebaseio.com",
+    projectId: "saas-c405c",
+    storageBucket: "saas-c405c.firebasestorage.app",
+    messagingSenderId: "696632747319",
+    appId: "1:696632747319:web:dd46b9f354e34545f626b2",
+    measurementId: "G-2H8DYT13VP"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
 </body>
 </html>
