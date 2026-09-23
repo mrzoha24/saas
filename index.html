@@ -780,6 +780,15 @@
                 <label class="block text-xs font-bold text-slate-300 mb-1">Event Details (For AI Automation)</label>
                 <input type="text" id="eventDetailsInput" required placeholder="e.g. Quiz Wednesday, Live Music Friday" class="w-full bg-pubDark-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500">
             </div>
+
+            <!-- Connect Facebook Page Button -->
+            <div class="pt-2">
+                <button type="button" onclick="connectFacebookPage()" class="w-full bg-[#1877F2] hover:bg-[#165fe6] text-white font-bold py-3 rounded-xl transition duration-300 flex items-center justify-center space-x-2 text-sm shadow-md">
+                    <i class="fa-brands fa-facebook text-lg"></i>
+                    <span id="fbConnectText">Connect Facebook Page</span>
+                </button>
+            </div>
+
             <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-pubDark-950 font-extrabold py-3.5 rounded-xl transition duration-300 shadow-lg">
                 GET STARTED FOR FREE <i class="fa-solid fa-arrow-right ml-1"></i>
             </button>
@@ -864,6 +873,7 @@
     ];
 
     let activeEventId = 'music';
+    let facebookConnected = false;
 
     // Render Event Tags
     function renderEventTags() {
@@ -970,22 +980,39 @@
     function openTrialModal(planName) {
         document.getElementById('modalPlanTitle').innerText = planName ? `Start Trial with ${planName}` : 'Start Your Free Trial';
         document.getElementById('trialModal').classList.remove('hidden');
+        facebookConnected = false;
+        document.getElementById('fbConnectText').innerText = 'Connect Facebook Page';
     }
 
     function closeTrialModal() {
         document.getElementById('trialModal').classList.add('hidden');
     }
 
+    // Simulated Facebook Page Connection (OAuth Popup placeholder)
+    function connectFacebookPage() {
+        // Here you can integrate Facebook SDK Login (FB.login)
+        facebookConnected = true;
+        const btnText = document.getElementById('fbConnectText');
+        btnText.innerText = '✓ Facebook Page Connected Successfully';
+        alert('সফলভাবে ফেসবুক পেজ কানেক্ট হয়েছে!');
+    }
+
     // n8n Webhook Form Submit Handler
     document.getElementById('pubForm').addEventListener('submit', async function(e) {
         e.preventDefault();
+
+        if (!facebookConnected) {
+            alert('দয়া করে ফর্ম সাবমিট করার আগে "Connect Facebook Page" এ ক্লিক করে ফেসবুক পেজ কানেক্ট করুন।');
+            return;
+        }
 
         const payload = {
             pub_name: document.getElementById('pubNameInput').value,
             manager_name: document.getElementById('managerNameInput').value,
             location: document.getElementById('locationInput').value,
             email: document.getElementById('emailInput').value,
-            event_details: document.getElementById('eventDetailsInput').value
+            event_details: document.getElementById('eventDetailsInput').value,
+            fb_connected: true
         };
 
         const submitBtn = document.getElementById('submitBtn');
@@ -1029,26 +1056,6 @@
         renderEventTags();
         renderEventCards();
     };
-</script>
-
-<!-- Firebase SDK Integration -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyA4GC9GV_4jc6P39_XXaKM8J_Bs2TnK6Bc",
-    authDomain: "saas-c405c.firebaseapp.com",
-    databaseURL: "https://saas-c405c-default-rtdb.firebaseio.com",
-    projectId: "saas-c405c",
-    storageBucket: "saas-c405c.firebasestorage.app",
-    messagingSenderId: "696632747319",
-    appId: "1:696632747319:web:dd46b9f354e34545f626b2",
-    measurementId: "G-2H8DYT13VP"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
 </script>
 
 </body>
