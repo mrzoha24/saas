@@ -980,18 +980,12 @@
     document.getElementById('pubForm').addEventListener('submit', async function(e) {
         e.preventDefault();
 
-        const pubName = document.getElementById('pubNameInput').value;
-        const managerName = document.getElementById('managerNameInput').value;
-        const location = document.getElementById('locationInput').value;
-        const email = document.getElementById('emailInput').value;
-        const eventDetails = document.getElementById('eventDetailsInput').value;
-
         const payload = {
-            pub_name: pubName,
-            manager_name: managerName,
-            location: location,
-            email: email,
-            event_details: eventDetails
+            pub_name: document.getElementById('pubNameInput').value,
+            manager_name: document.getElementById('managerNameInput').value,
+            location: document.getElementById('locationInput').value,
+            email: document.getElementById('emailInput').value,
+            event_details: document.getElementById('eventDetailsInput').value
         };
 
         const submitBtn = document.getElementById('submitBtn');
@@ -1001,9 +995,7 @@
         try {
             const response = await fetch('https://az23.app.n8n.cloud/webhook-test/saasautomate', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)
             });
 
@@ -1012,7 +1004,8 @@
                 submitBtn.innerText = 'GET STARTED FOR FREE';
                 submitBtn.disabled = false;
                 
-                alert('ডাটা সফলভাবে n8n-এ পাঠানো হয়েছে! আপনি চাইলে আবার নতুন ডাটা দিয়ে টেস্ট করতে পারেন।');
+                document.getElementById('pubForm').classList.add('hidden');
+                document.getElementById('modalSuccess').classList.remove('hidden');
             } else {
                 alert('ওয়েবহুক রিকোয়েস্ট ব্যর্থ হয়েছে। অনুগ্রহ করে n8n টেস্ট মোড চেক করুন।');
                 submitBtn.innerText = 'GET STARTED FOR FREE';
