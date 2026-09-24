@@ -1,0 +1,21 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Each pub owner can only read/write their own profile document.
+    match /pubOwners/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // Each pub owner can only read/create their own events, and can't
+    // edit the `status` field themselves (that's set by the automation
+    // side via a Cloud Function using the Admin SDK, which bypasses
+    // these rules entirely).
+    match /events/{eventId} {
+      allow read: if request.auth != null && request.auth.uid == resource.data.uid;
+      allow create: if request.auth != null && request.auth.uid == request.resource.data.uid;
+      allow update, delete: if false; // only server-side (Admin SDK) can update status
+    }
+  }
+}
