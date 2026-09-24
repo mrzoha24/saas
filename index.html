@@ -215,6 +215,58 @@
     </div>
 </section>
 
+<section id="how-it-works" class="py-24 bg-pubDark-950 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-amber-500 font-bold text-sm tracking-widest uppercase">Zero Effort Automation</span>
+                <h2 class="text-3xl sm:text-4xl font-heading font-black text-white">
+                    One message. <br><span class="text-amber-400">A whole week's marketing.</span>
+                </h2>
+                <p class="text-slate-300 leading-relaxed">
+                    No complicated software or design tools. Just type or speak one simple message to PUB AI about what’s happening in your pub this week.
+                </p>
+            </div>
+            <div class="lg:col-span-7">
+                <div class="bg-pubDark-900 border border-slate-800 rounded-2xl p-6 shadow-2xl">
+                    <p class="text-sm text-amber-300 font-mono">“Quiz Wednesday, live music Friday and Ireland match Saturday at 8pm.”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="photo-magic" class="py-20 bg-pubDark-900 border-y border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-amber-500 font-bold text-sm tracking-widest uppercase">Instant Content Creation</span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-white mt-2 mb-4">Take a photo. Get a promotion.</h2>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto">PUB AI turns standard phone photos into branded, high-converting promotional content for your pub.</p>
+    </div>
+</section>
+
+<section id="features" class="py-24 bg-pubDark-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-amber-500 font-bold text-sm tracking-widest uppercase">Everything You Need</span>
+            <h2 class="text-3xl sm:text-4xl font-heading font-black text-white mt-2 mb-4">PUB AI Keeps Your Pub Busy</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl">
+                <h3 class="text-lg font-bold text-white mb-2">Social Media Posts</h3>
+                <p class="text-sm text-slate-400">Automated, high-converting posts for Facebook and Instagram.</p>
+            </div>
+            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl">
+                <h3 class="text-lg font-bold text-white mb-2">Event Promotions</h3>
+                <p class="text-sm text-slate-400">Promotional artwork and announcements for live music and gigs.</p>
+            </div>
+            <div class="bg-pubDark-900 border border-slate-800 p-6 rounded-2xl">
+                <h3 class="text-lg font-bold text-white mb-2">Match-Day Campaigns</h3>
+                <p class="text-sm text-slate-400">Automatic fixture graphics and social announcements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="pricing" class="py-24 bg-pubDark-900 border-t border-slate-800/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -379,10 +431,9 @@
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
 <script>
-    // Initialize Facebook SDK
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : 'YOUR_FB_APP_ID', // Replace with your actual Facebook App ID from developers.facebook.com
+            appId      : 'YOUR_FB_APP_ID', 
             cookie     : true,
             xfbml      : true,
             version    : 'v18.0'
@@ -390,15 +441,12 @@
     };
 
     let facebookConnected = false;
-    let selectedPageAccessToken = '';
 
-    // Real Facebook Login and Fetch Pages function
     function loginWithFacebook() {
         FB.login(function(response) {
             if (response.authResponse) {
                 const userAccessToken = response.authResponse.accessToken;
                 
-                // Fetch real pages managed by the authenticated user via Graph API
                 FB.api('/me/accounts', { access_token: userAccessToken }, function(res) {
                     if (res && !res.error) {
                         const pages = res.data;
@@ -416,24 +464,21 @@
                             });
 
                             facebookConnected = true;
-                            selectedPageAccessToken = pages[0].access_token; // default first
-                            
                             document.getElementById('fbConnectText').innerText = '✓ Facebook Connected Successfully';
                             document.getElementById('pageSelectContainer').classList.remove('hidden');
                         } else {
                             alert('No Facebook pages found under your account!');
                         }
                     } else {
-                        alert('Failed to fetch Facebook pages. Please check app permissions.');
+                        alert('Failed to fetch Facebook pages.');
                     }
                 });
             } else {
-                alert('Facebook login was cancelled or not fully authorized.');
+                alert('Facebook login was cancelled.');
             }
         }, { scope: 'pages_show_list,pages_manage_posts,pages_read_engagement' });
     }
 
-    // Event Data Setup
     const eventData = [
         {
             id: 'music',
@@ -530,12 +575,11 @@
         document.getElementById('trialModal').classList.add('hidden');
     }
 
-    // Form submission handling data directly to n8n webhook
     document.getElementById('pubForm').addEventListener('submit', async function(e) {
         e.preventDefault();
 
         if (!facebookConnected) {
-            alert('Please connect your Facebook page using the button before submitting.');
+            alert('Please connect your Facebook page first.');
             return;
         }
 
@@ -568,25 +612,23 @@
                 document.getElementById('pubForm').reset();
                 submitBtn.innerText = 'GET STARTED FOR FREE';
                 submitBtn.disabled = false;
-                
                 document.getElementById('pubForm').classList.add('hidden');
                 document.getElementById('modalSuccess').classList.remove('hidden');
             } else {
-                alert('Webhook request failed. Please verify your n8n workflow.');
+                alert('Webhook request failed.');
                 submitBtn.innerText = 'GET STARTED FOR FREE';
                 submitBtn.disabled = false;
             }
         } catch (error) {
             console.error('Error:', error);
             alert('Connection error with n8n webhook.');
-            submitBtn.innerText = 'GET STARTED for FREE';
+            submitBtn.innerText = 'GET STARTED FOR FREE';
             submitBtn.disabled = false;
         }
     });
 
     document.getElementById('mobileMenuBtn')?.addEventListener('click', () => {
-        const menu = document.getElementById('mobileMenu');
-        menu.classList.toggle('hidden');
+        document.getElementById('mobileMenu').classList.toggle('hidden');
     });
 
     window.onload = function() {
