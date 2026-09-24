@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PUB AI — Dashboard</title>
+<link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+
+<div class="dash-shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-dot"></span> PUB AI</div>
+    <div class="nav-item active">Dashboard</div>
+    <div class="nav-item">Billing</div>
+    <div class="nav-item">Social Accounts</div>
+    <div class="nav-item">Settings</div>
+  </aside>
+
+  <div style="flex:1">
+    <div class="top-bar">
+      <span id="logout-link" class="logout-link">Log out</span>
+    </div>
+
+    <main class="main">
+      <div class="page-title" id="pub-name-display">Your pub</div>
+      <div class="page-sub">
+        <span id="plan-badge" class="badge inactive">No active plan</span>
+      </div>
+
+      <div class="card">
+        <h3>Tell PUB AI what's happening this week</h3>
+        <form id="event-form">
+          <textarea id="event-text" rows="3"
+            placeholder="e.g. Quiz Wednesday, live music Friday and Ireland match Saturday at 8pm."
+            required></textarea>
+
+          <input type="file" id="photo-input" accept="image/*" style="display:none" />
+          <div id="file-drop" class="file-drop">Click to attach a photo (optional)</div>
+
+          <button type="submit" id="event-submit" class="btn-primary" style="margin-top:16px">
+            Send to PUB AI
+          </button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Recent events</h3>
+        <div id="event-list"></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
